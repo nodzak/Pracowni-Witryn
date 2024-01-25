@@ -1,0 +1,44 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100vw;
+}
+
+#banner1 {
+    background-color: #483D8B;
+    height: 150px;
+    width: 30%;
+    float: left;
+}
+
+#banner2 {
+    background-color: #483D8B;
+    color: white;
+    height: 150px;
+    width: 70%;
+    float: left;
+}
+
+.day {
+    background-color: #AFEEEE;
+    width: 150px;
+    height: 100px;
+    margin: 3px;
+    border: 1px solid; /*a*/
+    float: left;
+}
+
+footer {
+    background-color: #483D8B;
+    color: white;
+    padding: 10px;
+    clear: both;
+}
+
+h5 {
+    text-align: center;
+}
