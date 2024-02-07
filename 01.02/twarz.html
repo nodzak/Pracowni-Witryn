@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Usługi kosmetyczne</title>
+    <link rel="stylesheet" href="styl.css" />
+</head>
+<body>
+    <div id="lewy1">
+        <h2>W ofercie</h2>
+        <ul>
+            <li><a href="twarz.html">Zabiegi na twarz</a>
+                <ol>
+                    <li>Piling</li>
+                    <li>Maska</li>
+                    <li>Regulacja brwi</li>
+                </ol>
+            </li>
+            <li>Masaż</li>
+            <li>Diety oczyszczające</li>
+        </ul>
+        <a href="index.html">Do strony głównej</a>
+    </div>
+    <div id="prawy1">
+        <h1>Salon Kosmetyczny</h1>
+    </div>
+    <div id="prawy2">
+        <h2>Sprawdź cenę swojej wizyty</h2>
+        <label>
+            <input type="checkbox" id="piling" />Piling<br/>
+        </label>
+        <label>
+            <input type="checkbox" id="maska" />Maska<br/>
+        </label>
+        <label>
+            <input type="checkbox" id="masaz" />Masaż twarzy<br/>
+        </label>
+        <label>
+            <input type="checkbox" id="regulacja" />Regulacja brwi<br/>
+        </label>
+        <button type="button" onclick="obliczCene()">Sprawdź cenę</button>
+        <p id="wynik"></p>
+    </div>
+    <div id="lewy2">
+        <img src="obraz1.jpg" alt="Kosmetyczka" />
+    </div>
+    <div id="stopka">
+        <p>Michał Nodżak</p>
+    </div>
+    <script>
+        function obliczCene() {
+            const cennik = {
+                'Piling': 45,
+                'Maska': 30,
+                'Masaż': 20,
+                'Regulacja brwi': 5
+            };
+
+            let suma = 0;
+
+            if (document.getElementById('piling').checked) {
+                suma += cennik['Piling'];
+            }
+            if (document.getElementById('maska').checked) {
+                suma += cennik['Maska'];
+            }
+            if (document.getElementById('masaz').checked) {
+                suma += cennik['Masaż'];
+            }
+            if (document.getElementById('regulacja').checked) {
+                suma += cennik['Regulacja brwi'];
+            }
+
+            const wynikDiv = document.getElementById('wynik');
+            wynikDiv.textContent = 'Cena zabiegów: ' + suma + ' zł';
+        }
+    </script>
+</body>
+</html>
